@@ -20,4 +20,12 @@ class Problem2Spec extends FlatSpec with Matchers {
     result shouldBe Seq(1,2,3,5,8,13,21,34,55,89)
   }
 
+  it should "generate the sum of even value terms which do not exceed 4 million" in {
+    val problem2 = new Problem2
+
+    val result = problem2.generateSumOfEvenValueFibonacciTerms(1,2, 4000000)
+
+    result shouldBe 4613732
+  }
+
 }
